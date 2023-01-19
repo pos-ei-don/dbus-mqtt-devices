@@ -244,3 +244,77 @@ gps:
     description: "m"
   NrOfSatellites:
     description: "Count"
+
+#https://github.com/victronenergy/venus/wiki/dbus#solar-chargers
+
+solarcharger:
+  ProductId:
+    default: 65535# 41074
+  CustomName:
+    default: "Solarcharger"
+    persist: true
+  Pv/V: # DD
+    description: "V"
+    default: 0
+    format: "{} V"
+  Yield/Power: #
+    description: "W"
+    default: 0
+    format: "{} W"
+  NrOfTrackers:
+    description: "Trackers"
+    default: 1
+  Pv/P: # Max rated power (in Watts) of the inverter
+    description: "W"
+    default: 0
+    format: "{} W"
+  Pv/0/P: # Max rated power (in Watts) of the inverter
+    description: "W"
+    default: 0
+    format: "{} W"
+  Pv/0/V: #
+    description: "V"
+    default: 0
+    format: "{} V"
+  Dc/0/Current: # DD
+    description: "A"
+    default: 0
+    format: "{} A"
+  Dc/0/Voltage: # DD
+    description: "V"
+    default: 52
+    format: "{} V"
+  Yield/SYSTEM: #
+    description: "W"
+    default: 0
+    format: "{} W"
+  Yield/User: #
+    description: "W"
+    default: 0
+    format: "{} W"
+  ErrorCode:
+    description: "0=No Error"
+    default: 0 # not showing in in console???
+  Mode:
+    description: ""
+    default: 1 #
+#  Link/NetworkStatus:
+#    description: ""
+#    default: 4 # 0x8
+#  Link/NetworkMode:
+#    description: ""
+#    default: 13 # 0x8
+#  Link/ChargeCurrent:
+#    description: ""
+#    default: 20 # 0x8
+#  Connected:
+#    description: ""
+#    default: 1 #
+##  MppOperationMode:
+#    description: ""
+#    default: 2 #
+#  State:
+#    description: "3=Bulk"
+#    default: 3
+#    min: 0
+#    max: 252
